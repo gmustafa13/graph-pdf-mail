@@ -27,3 +27,9 @@ create .env.dev file
 >EMAIL_PASSWORD = ' 16- digit app password  , you will get when you genrate app from google account'
 >NODE_ENV ='dev'
 >TO_MAIL = "abc@gmail.com"  or "abc@gmail.com , mn@gmail.com"
+
+
+## email trigger 
+> to run type npm start run
+> visit http://localhost:PORT 
+this will genrate report and convert into pdf after that trigger mail.
