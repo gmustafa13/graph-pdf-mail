@@ -16,17 +16,17 @@ const pdfGenerator = async () => {
         // call email function
         await sendEmail(path.join(__dirname, `../../downloads/${pdf}.pdf`), pdf)
 
-        // Promise.all([
-        //     fs.unlinkSync(path.join(__dirname, `../../downloads/${pdf}.pdf`)),
-        //     fs.unlinkSync(path.join(__dirname, `../../images/${image}.png`))
-        // ]) // deleting saved pdf/image file from server
+        Promise.all([
+            fs.unlinkSync(path.join(__dirname, `../../downloads/${pdf}.pdf`)),
+            fs.unlinkSync(path.join(__dirname, `../../images/${image}.png`))
+        ]) // deleting saved pdf/image file from server
         return true;
     } catch (error) {
         // removed file if sendemailfailed or any error any how it will throw error if not exist file
         Promise.all([
             fs.unlinkSync(path.join(__dirname, `../../downloads/${pdf}.pdf`)),
             fs.unlinkSync(path.join(__dirname, `../../images/${image}.png`))
-        ]) 
+        ])
         throw new Error(error.message)
     }
 }
