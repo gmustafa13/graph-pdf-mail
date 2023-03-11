@@ -1,0 +1,26 @@
+{
+  "name": "graph-pdf-mail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=dev nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmustafa13/graph-pdf-mail.git"
+  },
+  "author": "gmustafa.mansoori@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmustafa13/graph-pdf-mail/issues"
+  },
+  "homepage": "https://github.com/gmustafa13/graph-pdf-mail#readme",
+  "dependencies": {
+    "chart.js": "^4.2.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.1",
+    "puppeteer": "^19.7.4"
+  }
+}

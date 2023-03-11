@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bar Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+</head>
+
+<body>
+    <canvas id="myChart"></canvas>
+
+    <script>
+        const userData = {
+            "stepCount": [
+                {
+                    "day1": "100"
+                },
+                {
+                    "day2": "200"
+                },
+                {
+                    "day3": "300"
+                },
+                {
+                    "day4": "400"
+                },
+                {
+                    "day5": "300"
+                },
+                {
+                    "day6": "700"
+                },
+                {
+                    "day7": "100"
+                },
+                {
+                    "day8": "100"
+                },
+                {
+                    "day9": "400"
+                },
+                {
+                    "day10": "800"
+                }
+            ]
+        }
+        var xData = []
+        var yData = []
+        xData = userData.stepCount.map((x) => Object.keys(x)[0])
+        yData = userData.stepCount.map((x) => Object.values(x)[0])
+
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: xData,
+                datasets: [{
+                    label: 'Your Activity Record',
+                    data: yData,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+
+                    borderColor: 'rgba(255, 99, 132, 1)',
+
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
