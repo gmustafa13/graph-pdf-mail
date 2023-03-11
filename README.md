@@ -1,25 +1,27 @@
 # graph-pdf-mail
 
 ## installation 
+after clone please use these command
 > npm i -g nodemon
 > npm install
 
 ## Google account setup for email
-Becouse of google security need to do this for using email service
+Becouse of google security need to do this for using email service (for nodemailer)
 for step to step guide please visit
-** https://support.google.com/mail/answer/185833?hl=en **
+
+https://support.google.com/mail/answer/185833?hl=en
 
 ## variable
 
 create .env.dev file 
-** must have these variable ** 
+```Must have these variable ```
 PORT 
 EMAIL 
 EMAIL_PASSWORD 
 NODE_ENV 
 TO_MAIL 
 
-** example ** 
+```example ```
 PORT = 3000
 EMAIL = 'abc.gmal.com'
 EMAIL_PASSWORD = ' 16- digit app password  , you will get when you genrate app from google account'
